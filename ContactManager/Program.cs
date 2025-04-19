@@ -1,4 +1,11 @@
+using Contact.Infrus;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+var connection = builder.Configuration.GetConnectionString("ConnectionString");
+
+ContactBootstrapper.Configure(builder.Services,connection);
 
 // Add services to the container.
 builder.Services.AddRazorPages();

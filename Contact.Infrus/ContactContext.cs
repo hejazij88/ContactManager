@@ -10,7 +10,7 @@ namespace Contact.Infrus
 {
     public class ContactContext:DbContext
     {
-
+        public DbSet<Domain.Contact> Contacts { get; set; }
         public ContactContext(DbContextOptions<ContactContext> option):base(option)
         {
             
