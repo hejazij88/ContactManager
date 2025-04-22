@@ -1,9 +1,10 @@
 using Contact.Infrus;
+using Contact.Infrus.Config;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-var connection = builder.Configuration.GetConnectionString("ConnectionString");
+var connection = builder.Configuration.GetConnectionString("ContactString");
 
 ContactBootstrapper.Configure(builder.Services,connection);
 

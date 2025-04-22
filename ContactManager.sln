@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contact.Application", "Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contact.Application.Share", "Contact.Application.Share\Contact.Application.Share.csproj", "{A886CF42-9D7A-42FB-BB64-D166310FE7ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contact.Infrus.Config", "Contact.Infrus.Config\Contact.Infrus.Config.csproj", "{468AE823-2A69-447A-94E9-142F9DE39CAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{A886CF42-9D7A-42FB-BB64-D166310FE7ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A886CF42-9D7A-42FB-BB64-D166310FE7ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A886CF42-9D7A-42FB-BB64-D166310FE7ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468AE823-2A69-447A-94E9-142F9DE39CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468AE823-2A69-447A-94E9-142F9DE39CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468AE823-2A69-447A-94E9-142F9DE39CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468AE823-2A69-447A-94E9-142F9DE39CAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +60,6 @@ Global
 		{5734140F-8D29-4E8D-AB47-69DD5A11CF57} = {11325B1E-829E-465E-9451-2FE6FD4E3536}
 		{418CD433-CC07-46A4-AD62-9A3808055424} = {FF07C7B5-7E8C-4CBF-BE81-AACC55FA080A}
 		{A886CF42-9D7A-42FB-BB64-D166310FE7ED} = {FF07C7B5-7E8C-4CBF-BE81-AACC55FA080A}
+		{468AE823-2A69-447A-94E9-142F9DE39CAF} = {11325B1E-829E-465E-9451-2FE6FD4E3536}
 	EndGlobalSection
 EndGlobal

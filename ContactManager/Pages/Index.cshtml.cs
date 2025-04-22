@@ -7,20 +7,19 @@ namespace ContactManager.Pages
     public class IndexModel : PageModel
     {
         private readonly IContactApplication _contactApplication;
-        public List<ContactViewModel> viewModel { get; set; }
+        public List<ContactViewModel?> contactList;
 
         private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger, List<ContactViewModel> viewModel, IContactApplication contactApplication)
+        public IndexModel(ILogger<IndexModel> logger, IContactApplication contactApplication)
         {
-            _logger = logger;
-            this.viewModel = viewModel;
             _contactApplication = contactApplication;
+            _logger = logger;
         }
 
         public void OnGet()
         {
-            viewModel = _contactApplication.GetAll();
+            contactList = _contactApplication.GetAll();
         }
     }
 }

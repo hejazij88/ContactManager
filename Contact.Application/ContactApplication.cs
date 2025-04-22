@@ -12,6 +12,6 @@ namespace Contact.Application
             _contactRepository = contactRepository;
         }
 
-        public List<ContactViewModel> GetAll() => _contactRepository.GetAll();
+        public List<ContactViewModel?> GetAll() => _contactRepository.GetAll();
     }
 }
