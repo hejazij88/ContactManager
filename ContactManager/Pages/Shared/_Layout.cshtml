@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#showmodal=@Url.Page("./Index", "AddContact")">Add Contact</a>
+                    <a class="nav-link active" aria-current="page" href="#showmodal=@Url.Page("/Index", "AddContact")">Add Contact</a>
                 </li>
             </ul>
         </div>
@@ -35,6 +35,8 @@
 </body>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script> <!-- Optional for ASP.NET Core -->
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
 @await RenderSectionAsync("Scripts", required: false)

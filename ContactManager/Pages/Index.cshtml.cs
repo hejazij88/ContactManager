@@ -21,7 +21,12 @@ namespace ContactManager.Pages
         {
             contactList = _contactApplication.GetAll();
         }
-        public void OnPost()
+        public IActionResult OnGetAddContact()
+        {
+            var command = new AddContactModel();
+            return Partial("./AddContact", command);
+        }
+        public void OnPostAddContact()
         {
         }
     }
