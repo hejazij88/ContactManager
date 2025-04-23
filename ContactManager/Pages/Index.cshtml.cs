@@ -21,5 +21,8 @@ namespace ContactManager.Pages
         {
             contactList = _contactApplication.GetAll();
         }
+        public void OnPost()
+        {
+        }
     }
 }
