@@ -10,5 +10,9 @@ public interface IContactRepository
 
     void Update(Contact contact);
 
+    EditContactModel GetById(Guid id);
+
+    Contact? EditContact(Guid id);
+
     void SaveChange();
 }

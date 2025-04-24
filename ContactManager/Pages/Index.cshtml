@@ -12,6 +12,8 @@
             <th scope="col">Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Phone</th>
+            <th scope="col">Operation</th>
+
         </tr>
     </thead>
     <tbody>
@@ -24,6 +26,12 @@
                 <td>@item.Name</td>
                 <td>@item.LastName</td>
                 <td>@item.Phone</td>
+                <td>
+                    <a class="btn btn-warning" href="#showmodal=@Url.Page("./Index", "EditContact", new { id = item.Id})">Edit</a>
+                    <button></button>
+
+                </td>
+
             </tr>
         }
     </tbody>

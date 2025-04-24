@@ -1,6 +1,7 @@
 using Contact.Application.Share.Contacts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace ContactManager.Pages
 {
@@ -29,6 +30,17 @@ namespace ContactManager.Pages
         public JsonResult OnPostAddContact(AddContactModel command)
         {
             var result = _contactApplication.Create(command);
+            return new JsonResult(result);
+        }
+
+        public IActionResult OnGetEditContact(Guid id)
+        {
+            var result = _contactApplication.GetById(id);
+            return Partial("./EditContact", result);
+        }
+        public JsonResult OnPostEditContact(EditContactModel command)
+        {
+            var result = _contactApplication.Edit(command);
             return new JsonResult(result);
         }
     }

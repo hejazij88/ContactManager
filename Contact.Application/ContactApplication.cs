@@ -29,5 +29,22 @@ namespace Contact.Application
             return operation.Succedded();
 
         }
+
+        public OperationResult Edit(EditContactModel contactModel)
+        {
+            var operation = new OperationResult();
+            var command = _contactRepository.EditContact(contactModel.Id);
+            if (command == null)
+                return operation.Failed("Can't Edit Call By Admin"); 
+
+            var path = "/Images";
+            var picturePath = _fileUploader.Upload(contactModel.Photo, path);
+
+             command.Edit(contactModel.Id,contactModel.Name, contactModel.LastName, contactModel.NikeName, contactModel.Email, contactModel.Phone, picturePath, contactModel.Address);
+            _contactRepository.SaveChange();
+            return operation.Succedded();
+        }
+
+        public EditContactModel? GetById(Guid id) => _contactRepository.GetById(id);
     }
 }

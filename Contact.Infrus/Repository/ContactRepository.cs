@@ -28,6 +28,17 @@ namespace Contact.Infrus.Repository
             throw new NotImplementedException();
         }
 
+        public EditContactModel? GetById(Guid id) => _context.Contacts.Select(c => new EditContactModel
+        {
+            Id = c.Id, Phone = c.Phone, Address = c.Address, Email = c.Email, LastName = c.LastName, Name = c.Name,
+            NikeName = c.NikeName
+        }).FirstOrDefault(c => c.Id == id);
+
+        public Domain.Contact? EditContact(Guid id)
+        {
+            return _context.Contacts.FirstOrDefault(contact => contact.Id == id);
+        }
+
         public void SaveChange()
         {
             _context.SaveChanges();

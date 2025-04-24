@@ -13,6 +13,6 @@ public class AddContactModel
     public string Email { get; set; }
     [Required]
     public string Phone { get; set; }
-    public IFormFile Photo { get; set; }
+    public IFormFile? Photo { get; set; }
     public string Address { get; set; }
 }
