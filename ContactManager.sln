@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contact.Application.Share",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contact.Infrus.Config", "Contact.Infrus.Config\Contact.Infrus.Config.csproj", "{468AE823-2A69-447A-94E9-142F9DE39CAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0_Framwork", "0_FreamWork\0_Framwork.csproj", "{253C21BC-A65A-443D-A6A8-DAD79A819C1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{468AE823-2A69-447A-94E9-142F9DE39CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{468AE823-2A69-447A-94E9-142F9DE39CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{468AE823-2A69-447A-94E9-142F9DE39CAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{253C21BC-A65A-443D-A6A8-DAD79A819C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{253C21BC-A65A-443D-A6A8-DAD79A819C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{253C21BC-A65A-443D-A6A8-DAD79A819C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{253C21BC-A65A-443D-A6A8-DAD79A819C1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

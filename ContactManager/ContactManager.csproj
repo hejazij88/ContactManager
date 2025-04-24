@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\0_FreamWork\0_Framwork.csproj" />
     <ProjectReference Include="..\Contact.Infrus.Config\Contact.Infrus.Config.csproj" />
     <ProjectReference Include="..\Contact.Infrus\Contact.Infrus.csproj" />
   </ItemGroup>

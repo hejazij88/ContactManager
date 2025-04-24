@@ -18,7 +18,9 @@
         @foreach (var item in Model.contactList)
         {
             <tr>
-                <td>@item.Picture</td>
+                <td>
+                    <img src="~/Contact/@item.Picture" style="width: 70px; height: 70px" />
+                </td>
                 <td>@item.Name</td>
                 <td>@item.LastName</td>
                 <td>@item.Phone</td>

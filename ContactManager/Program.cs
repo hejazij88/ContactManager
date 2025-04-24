@@ -1,5 +1,7 @@
+using _0_FramWork;
 using Contact.Infrus;
 using Contact.Infrus.Config;
+using ContactManager;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connection = builder.Configuration.GetConnectionString("ContactString");
 
 ContactBootstrapper.Configure(builder.Services,connection);
-
+builder.Services.AddTransient<IFileUploader, FileUploader>();
 // Add services to the container.
 builder.Services.AddRazorPages();
 

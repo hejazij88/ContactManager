@@ -17,6 +17,20 @@ namespace Contact.Infrus.Repository
             _context = context;
         }
 
-        public List<ContactViewModel> GetAll() => _context.Contacts.Select(c => new ContactViewModel{Id= c.Id,Name= c.Name,LastName= c.LastName,Phone= c.Photo,Picture= c.Phone }).ToList();
+        public List<ContactViewModel> GetAll() => _context.Contacts.Select(c => new ContactViewModel{Id= c.Id,Name= c.Name,LastName= c.LastName,Phone= c.Phone,Picture= c.Photo }).ToList();
+        public void Create(Domain.Contact contact)
+        {
+            _context.Contacts.Add(contact);
+        }
+
+        public void Update(Domain.Contact contact)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveChange()
+        {
+            _context.SaveChanges();
+        }
     }
 }

@@ -26,8 +26,10 @@ namespace ContactManager.Pages
             var command = new AddContactModel();
             return Partial("./AddContact", command);
         }
-        public void OnPostAddContact()
+        public JsonResult OnPostAddContact(AddContactModel command)
         {
+            var result = _contactApplication.Create(command);
+            return new JsonResult(result);
         }
     }
 }
