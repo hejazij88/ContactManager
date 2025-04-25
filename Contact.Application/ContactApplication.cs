@@ -45,6 +45,18 @@ namespace Contact.Application
             return operation.Succedded();
         }
 
+        public OperationResult Delete(Guid id)
+        {
+            var operation = new OperationResult();
+            var contact = _contactRepository.EditContact(id);
+            if (contact == null)
+                return operation.Failed("Don't have This Record");
+
+            _contactRepository.Delete(contact);
+            _contactRepository.SaveChange();
+            return operation.Succedded();
+        }
+
         public EditContactModel? GetById(Guid id) => _contactRepository.GetById(id);
     }
 }

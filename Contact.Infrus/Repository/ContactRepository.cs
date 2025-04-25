@@ -23,10 +23,7 @@ namespace Contact.Infrus.Repository
             _context.Contacts.Add(contact);
         }
 
-        public void Update(Domain.Contact contact)
-        {
-            throw new NotImplementedException();
-        }
+        public void Delete(Domain.Contact contact) => _context.Contacts.Remove(contact);
 
         public EditContactModel? GetById(Guid id) => _context.Contacts.Select(c => new EditContactModel
         {

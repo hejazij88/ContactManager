@@ -8,7 +8,7 @@ public interface IContactRepository
 
     void Create(Contact contact);
 
-    void Update(Contact contact);
+    void Delete(Contact contact);
 
     EditContactModel GetById(Guid id);
 

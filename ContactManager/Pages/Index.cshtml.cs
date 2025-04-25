@@ -43,5 +43,15 @@ namespace ContactManager.Pages
             var result = _contactApplication.Edit(command);
             return new JsonResult(result);
         }
+
+        public IActionResult OnGetDeleteContact(Guid id)
+        {
+            return Partial("./DeleteContact", new DeleteContactModel{Id = id});
+        }
+        public JsonResult OnPostDeleteContact(DeleteContactModel command)
+        {
+            var result = _contactApplication.Delete(command.Id);
+            return new JsonResult(result);
+        }
     }
 }
